@@ -9,10 +9,12 @@ int main(void)
 {
 	int i;
 	int j;
+	int tmp;
 
-	for (i = 48; i <= 57; i++)
+	tmp = 49;
+	for (i = 48; i < 57; i++)
 	{
-		for (j = 48; j <= 57; j++)
+		for (j = tmp; j <= 57; j++)
 		{
 			putchar(i);
 			putchar(j);
@@ -22,6 +24,7 @@ int main(void)
 				putchar(' ');
 			}
 		}
+		tmp++;
 	}
 	putchar('\n');
 	return (0);
