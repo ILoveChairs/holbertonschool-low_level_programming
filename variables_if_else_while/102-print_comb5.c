@@ -12,7 +12,7 @@
 *
 * Description: This is a longer description.
 */
-void lfun(int *i, int *j, int *k, int *lt, int *kf, int *lf)
+void lfun(int *i, int *j, int *k, int *lt)
 {
 	int l;
 
@@ -49,17 +49,17 @@ void kfun(int *i, int *j, int *kf, int *lf)
 	if (*lf == 57)
 	{
 		if (*kf != 57)
-			*kf++;
+			*kf = *kf + 1;
 		*lf = 48;
 	}
 	else
 	{
-		*lf++;
+		*lf = *lf + 1;
 	}
 	if (*i == 57 && *j == 57)
 		*kf = 100;
 	for (k = *kf; k <= 57; k++)
-		lfun(i, j, &k, &lt, kf, lf);
+		lfun(i, j, &k, &lt);
 }
 
 /**
@@ -91,7 +91,7 @@ void ifun(int *kf, int *lf)
 {
 	int i;
 
-	for (i = 48; i < 57; i++)
+	for (i = 48; i <= 57; i++)
 		jfun(&i, kf, lf);
 }
 
