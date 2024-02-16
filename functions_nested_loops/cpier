@@ -1,13 +1,14 @@
-#include <stdlib.h>
-#include <stdio.h>
+#ifndef HEADER_FILE
+#define HEADER_FILE
+#include "main.h"
+#endif
 
 /**
- * main - asdfg
+ *  - asdfg
  *
- * Description: asdfg
- * Return: 0 motivation
+ * Return: asdfg
  */
-int main(void)
+ (void)
 {
-	return (0);
+    return (0);
 }
