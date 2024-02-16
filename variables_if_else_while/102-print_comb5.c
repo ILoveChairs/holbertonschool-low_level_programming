@@ -54,8 +54,6 @@ void kfun(int *i, int *j, int *kf, int *lf)
 	{
 		*lf = *lf + 1;
 	}
-	if (*i == 57 && *j == 57)
-		*kf = 100;
 	for (k = *kf; k <= 57; k++)
 		lfun(i, j, &k, &lt);
 }
@@ -74,6 +72,8 @@ void jfun(int *i, int *kf, int *lf)
 
 	for (j = 48; j <= 57; j++)
 	{
+		if (*i == 57 && j == 57)
+			break;
 		kfun(i, &j, kf, lf);
 	}
 }
