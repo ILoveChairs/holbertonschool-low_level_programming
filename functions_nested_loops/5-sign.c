@@ -6,7 +6,6 @@
 /**
  * print_sign - asdfg
  * @n: asdf
- * 
  * Return: asdfg
  */
 int print_sign(int n)
