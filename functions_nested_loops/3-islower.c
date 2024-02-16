@@ -4,7 +4,8 @@
 #endif
 
 /**
- *  - asdfg
+ * _islower - asdfg
+ * @c: char
  *
  * Return: asdfg
  */
