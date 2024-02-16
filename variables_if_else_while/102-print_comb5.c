@@ -7,8 +7,6 @@
 * @j: asdfg
 * @k: asdfg
 * @lt: asdfg
-* @kf: asdfg
-* @lf: asdfg
 *
 * Description: This is a longer description.
 */
