@@ -6,15 +6,15 @@
 * @i: asdfg
 * @j: asdfg
 * @k: asdfg
-* @lt: asdfg
+* @lf: asdfg
 *
 * Description: This is a longer description.
 */
-void lfun(int *i, int *j, int *k, int *lt)
+void lfun(int *i, int *j, int *k, int *lf)
 {
 	int l;
 
-	for (l = *lt; l <= 57; l++)
+	for (l = *lf; l <= 57; l++)
 	{
 		putchar(*i);
 		putchar(*j);
@@ -26,47 +26,41 @@ void lfun(int *i, int *j, int *k, int *lt)
 		putchar(',');
 		putchar(' ');
 	}
-	*lt = 48;
+	*lf = 48;
 }
 
 /**
 * kfun - description
 * @i: asdfg
 * @j: asdfg
-* @kf: asdfg
-* @lf: asdfg
 *
 * Description: This is a longer description.
 */
-void kfun(int *i, int *j, int *kf, int *lf)
+void kfun(int *i, int *j)
 {
 	int k;
-	int lt;
+	int kf;
+	int lf;
 
-	lt = *lf;
-	if (*lf == 57)
+	kf = *i;
+	lf = *j + 1;
+
+	if (lf > 57)
 	{
-		if (*kf != 57)
-			*kf = *kf + 1;
-		*lf = 48;
+		kf = kf + 1;
+		lf = 48;
 	}
-	else
-	{
-		*lf = *lf + 1;
-	}
-	for (k = *kf; k <= 57; k++)
-		lfun(i, j, &k, &lt);
+	for (k = kf; k <= 57; k++)
+		lfun(i, j, &k, &lf);
 }
 
 /**
 * jfun - description
 * @i: asdfg
-* @kf: asdfg
-* @lf: asdfg
 *
 * Description: This is a longer description.
 */
-void jfun(int *i, int *kf, int *lf)
+void jfun(int *i)
 {
 	int j;
 
@@ -74,23 +68,21 @@ void jfun(int *i, int *kf, int *lf)
 	{
 		if (*i == 57 && j == 57)
 			break;
-		kfun(i, &j, kf, lf);
+		kfun(i, &j);
 	}
 }
 
 /**
 * ifun - description
-* @kf: asdfg
-* @lf: asdfg
 *
 * Description: This is a longer description.
 */
-void ifun(int *kf, int *lf)
+void ifun(void)
 {
 	int i;
 
 	for (i = 48; i <= 57; i++)
-		jfun(&i, kf, lf);
+		jfun(&i);
 }
 
 /**
@@ -100,13 +92,7 @@ void ifun(int *kf, int *lf)
 */
 int main(void)
 {
-	int kf;
-	int lf;
-
-	kf = 48;
-	lf = 49;
-
-	ifun(&kf, &lf);
+	ifun();
 
 	putchar('\n');
 
