@@ -15,17 +15,14 @@ void times_table(void)
 
 	for (y = 0; y <= 9; y++)
 	{
-		for (x = 0; 0 <=; x++)
+		for (x = 0; x <= 9; x++)
 		{
 			xy = x * y;
-			if (xy > 9)
-			{
-				_putchar((x * y) + 48);
-			}
-			else
-			{
+			_putchar(44);
+			_putchar(32);
+			if (xy <= 9)
 				_putchar(32);
-			}
+			_putchar((x * y) + 48);
 		}
 	}
 }
