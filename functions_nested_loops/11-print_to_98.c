@@ -4,26 +4,14 @@
 #endif
 
 /**
- * abs - asdfg
- * @n: asdfg
- *
- * Return: asdfg
- */
-int abs(int n)
-{
-	if (n < 0)
-		return (n * -1);
-	return n;
-}
-
-/**
  * power - copy paste from internet
  * @base: asdfg
  * @exp: asdfg
  *
  * Return: asdfg
  */
-int power(int base, int exp) {
+int power(int base, int exp)
+{
 	int i;
 	int result;
 
@@ -31,8 +19,8 @@ int power(int base, int exp) {
 	result = 1;
 	for (i = 0; i < exp; i++)
 		result *= base;
-	return result;
- }
+	return (result);
+}
 
 /**
  * print_n - asdfg
@@ -47,8 +35,24 @@ void print_n(int n)
 }
 
 /**
+ * _printer_checker - asdf
+ * @n: asdfg
+ * Return: asdf
+ */
+int _printer_checker(int n)
+{
+	if (n < 0)
+	{
+		_putchar(45);
+		if (n < 0)
+			n = n * -1;
+	}
+	return (n);
+}
+
+/**
  * printer - asdfg
- * n: asdfg
+ * @n: asdfg
  */
 void printer(int n)
 {
@@ -58,13 +62,7 @@ void printer(int n)
 	int foo;
 
 	nn = n;
-
-	if (n < 0)
-	{
-		_putchar(45);
-		n = abs(n);
-	}
-
+	n = _printer_checker(n);
 	if (n <= 9)
 	{
 		print_n(n);
@@ -75,7 +73,7 @@ void printer(int n)
 		{
 			d = 0;
 			tmp = n;
-			while(tmp > 9)
+			while (tmp > 9)
 			{
 				tmp = tmp / 10;
 				d++;
@@ -90,7 +88,7 @@ void printer(int n)
 		}
 		print_n(n);
 	}
-	
+
 	if (nn != 98)
 	{
 		_putchar(44);
