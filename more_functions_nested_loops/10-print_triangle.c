@@ -5,7 +5,8 @@
 
 /**
  * print_triangle - asdfg
- * @size
+ * @size: asdfg
+ *
  */
 void print_triangle(int size)
 {
