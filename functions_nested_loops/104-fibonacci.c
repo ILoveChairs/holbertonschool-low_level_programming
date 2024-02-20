@@ -24,7 +24,9 @@ int main(void)
 		b = b + a;
 		a = tmp;
 
-		if (i != 95)
+		if (i >= 90 && i != 95)
+			printf("%.0Lf, ", b - (long double)1);
+		else if (i != 95)
 			printf("%.0Lf, ", b);
 		else
 			printf("%.0Lf\n", b - (long double)1);
