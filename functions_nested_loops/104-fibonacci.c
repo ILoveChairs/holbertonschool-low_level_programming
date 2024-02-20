@@ -23,20 +23,11 @@ int main(void)
 		tmp = b;
 		b = b + a;
 		a = tmp;
-		if (i == 90)
-			printf("%.0Lf7, ", b / 10.0);
-		else if (i == 91)
-			printf("%.0Lf5, ", b / 10.0);
-		else if (i == 92)
-			printf("%.0Lf2, ", b / 10.0);
-		else if (i == 93)
-			printf("%.0Lf7, ", b / 10.0);
-		else if (i == 94)
-			printf("%.0Lf9, ", b / 10.0);
-		else if (i != 95)
+
+		if (i != 95)
 			printf("%.0Lf, ", b);
 		else
-			printf("%.0Lf6\n", b / 10.0);
+			printf("%.0Lf\n", b - (long double)1);
 	}
 	return (0);
 }
