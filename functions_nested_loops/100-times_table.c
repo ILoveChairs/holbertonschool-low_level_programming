@@ -13,7 +13,7 @@ void _two_digits(int n)
 	int x;
 	int y;
 	int xy;
-	
+
 	for (y = 0; y <= n; y++)
 	{
 		for (x = 0; x <= n; x++)
@@ -47,7 +47,7 @@ void _three_digits(int n)
 	int x;
 	int y;
 	int xy;
-	
+
 	for (y = 0; y <= n; y++)
 	{
 		for (x = 0; x <= n; x++)
@@ -58,7 +58,7 @@ void _three_digits(int n)
 				_putchar(44);
 				_putchar(32);
 				if (xy < 100)
-                                        _putchar(32);
+					_putchar(32);
 				else
 					_putchar(((xy / 100) % 10) + 48);
 				if (xy < 10)
