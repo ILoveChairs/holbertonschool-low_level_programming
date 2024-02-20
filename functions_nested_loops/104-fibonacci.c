@@ -23,18 +23,10 @@ int main(void)
 		tmp = b;
 		b = b + a;
 		a = tmp;
-		if (i == 90)
-			printf("19740274219868223167, ");
-		else if (i == 91)
-			printf("31940434634990099905, ");
-		else if (i == 92)
-			printf("51680708854858323072, ");
-		else if (i == 93)
-			printf("83621143489848422977, ");
-		else if (i != 94)
+		if (i != 94)
 			printf("%.0Lf, ", b);
 		else
-			printf("135301852344706746049\n");
+			printf("%.0Lf\n", b);
 	}
 	return (0);
 }
