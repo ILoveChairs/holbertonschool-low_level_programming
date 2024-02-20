@@ -1,4 +1,12 @@
-#include <stdio.h>
+#include <unistd.h>
+
+/**
+ *
+ */
+int _putchar(char c)
+{
+        return (write(1, &c, 1));
+}
 
 /**
  * main - asdf
@@ -12,8 +20,8 @@ int main(void)
 
 	for (i = 0; string[i] != 0; i++)
 	{
-		putchar(string[i]);
+		_putchar(string[i]);
 	}
-	putchar(10);
+	_putchar(10);
 	return (1);
 }
