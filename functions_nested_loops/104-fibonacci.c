@@ -1,4 +1,5 @@
-#include "stdio.h"
+#include <stdio.h>
+#include <math.h>
 
 /**
  * main - asdfg
@@ -21,9 +22,9 @@ int main(void)
 		b = b + a;
 		a = tmp;
 		if (i != 96)
-			printf("%Lf, ", b);
+			printf("%.0Lf, ", b);
 		else
-			printf("%Lf\n", b);
+			printf("%.0Lf\n", b);
 	}
 	return (0);
 }
