@@ -7,10 +7,10 @@
  */
 int main(void)
 {
-	long unsigned int i;
-	long unsigned int a;
-	long unsigned int b;
-	long unsigned int tmp;
+	unsigned long int i;
+	unsigned long int a;
+	unsigned long int b;
+	unsigned long int tmp;
 
 	a = 1;
 	b = 2;
