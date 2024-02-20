@@ -26,7 +26,7 @@ int main(void)
 		if (i != 95)
 			printf("%.0Lf, ", b);
 		else
-			printf("%.0Lf\n", b);
+			printf("%.0Lf ", b);
 	}
 	return (0);
 }
