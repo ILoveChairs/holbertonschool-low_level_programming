@@ -14,6 +14,7 @@ int main(void)
 
 	a = 1;
 	b = 2;
+	printf("1, 2, ");
 	for (i = 0; i <= 50; i++)
 	{
 		tmp = b;
