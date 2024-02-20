@@ -9,6 +9,7 @@
 int main(void)
 {
 	int i;
+
 	long double a;
 	long double b;
 	long double tmp;
