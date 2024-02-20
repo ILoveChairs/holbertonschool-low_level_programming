@@ -29,7 +29,7 @@ int main(void)
 		else if (i != 95)
 			printf("%.0Lf, ", b);
 		else
-			printf("%.0Lf\n", b - (long double)1);
+			printf("%.0Lf\n", b + ((long double)5.0));
 	}
 	return (0);
 }
