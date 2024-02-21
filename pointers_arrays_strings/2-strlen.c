@@ -4,11 +4,19 @@
 #endif
 
 /**
- *  - asdfg
- *
+ * _strlen - asdfg
+ * @s: asdfg
  * Return: asdfg
  */
- (void)
+int _strlen(char *s)
 {
-	return (0);
+	int sum;
+
+	sum = 0;
+	while (*s)
+	{
+		sum = sum + 1;
+		s = s + 1;
+	}
+	return (sum);
 }
