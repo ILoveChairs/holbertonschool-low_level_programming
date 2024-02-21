@@ -4,11 +4,33 @@
 #endif
 
 /**
- *  - asdfg
- *
- * Return: asdfg
+ * rev_string - asdfg
+ * @s: asdfg
  */
- (void)
+void rev_string(char *s)
 {
-	return (0);
+	int i = 0;
+	int l = 0;
+	char ss[128];
+
+	while (*s)
+	{
+		s = s + 1;
+		i = i + 1;
+	}
+	s = s - 1;
+	while (i != 0)
+	{
+		ss[l] = *s;
+		s = s - 1;
+		i = i - 1;
+		l = l + 1;
+	}
+	s = s + 1;
+	while (*s)
+	{
+		*s = ss[i];
+		s = s + 1;
+		i = i + 1;
+	}
 }
