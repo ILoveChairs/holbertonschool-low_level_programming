@@ -23,9 +23,10 @@ int _atoi(char *s)
 	for (; *s; s++)
 	{
 		if (*s == '-' && nega_bool)
-			nega = nega - 1;
-		else if (*s == '+' && nega_bool)
-			nega = nega + 1;
+			if (nega == 1)
+				nega = 0;
+			else
+				nega = 1;
 		else if (*s >= 48 && *s <= 57)
 		{
 			if (num_bool || num == 0)
@@ -43,7 +44,7 @@ int _atoi(char *s)
 			nega_bool = 0;
 		}
 	}
-	if (nega < 0)
+	if (nega == 1)
 		return (num * -1);
 	return (num);
 }
