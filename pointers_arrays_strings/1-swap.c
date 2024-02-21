@@ -4,11 +4,15 @@
 #endif
 
 /**
- *  - asdfg
- *
- * Return: asdfg
+ * swap_int - asdfg
+ * @a: asdfg
+ * @b: asdfg
  */
- (void)
+void swap_int(int *a, int *b)
 {
-	return (0);
+	int tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
