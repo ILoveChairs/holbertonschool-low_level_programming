@@ -34,17 +34,17 @@ int _atoi(char *s)
 				num_bool = 1;
 				if (num > 0)
 					num = (num * 10) + (*s - 48);
+				else if (num < 0)
+					num = (num * 10) - (*s - 48);
 				else
 					num = *s - 48;
 			}
-		}
-		else if (num_bool)
-		{
-			num_bool = 0;
+			if (nega == 1 && nega_bool)
+				num = num * -1;
 			nega_bool = 0;
 		}
+		else if (num_bool)
+			num_bool = 0;
 	}
-	if (nega == 1)
-		return (num * -1);
 	return (num);
 }
