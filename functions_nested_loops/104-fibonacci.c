@@ -24,11 +24,10 @@ int main(void)
 		tmp = b;
 		b = b + a;
 		a = tmp;
-
 		if (i != 95)
 			printf("%lu, ", b);
 		else
-			printf("%lu", b);
+			printf("%lu\n", b);
 	}
 	return (0);
 }
