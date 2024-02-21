@@ -4,11 +4,15 @@
 #endif
 
 /**
- *  - asdfg
- *
- * Return: asdfg
+ * _puts - asdfg
+ * @str: asdfg
  */
- (void)
+void _puts(char *str)
 {
-	return (0);
+	while (*str)
+	{
+		_putchar(*str);
+		str = str + 1;
+	}
+	_putchar(10);
 }
