@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <math.h>
+#include <stdint.h>
+
 
 /**
  * main - asdfg
@@ -25,11 +26,11 @@ int main(void)
 		a = tmp;
 
 		if (i >= 90 && i != 95)
-			printf("%.0Lf, ", b - (long double)1);
+			printf("%.0Lf, ", b);
 		else if (i != 95)
 			printf("%.0Lf, ", b);
 		else
-			printf("%.0Lf\n", b + ((long double)5.0));
+			printf("%.0Lf\n", b);
 	}
 	return (0);
 }
