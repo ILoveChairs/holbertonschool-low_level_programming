@@ -4,11 +4,18 @@
 #endif
 
 /**
- *  - asdfg
- *
- * Return: asdfg
+ * puts2 - asdfg
+ * @str: asdfg
  */
- (void)
+void puts2(char *str)
 {
-	return (0);
+	int i;
+
+	for (i = 0; *str; i++)
+	{
+		if (i % 2 == 0)
+			_putchar(*str);
+		str = str + 1;
+	}
+	_putchar(10);
 }
