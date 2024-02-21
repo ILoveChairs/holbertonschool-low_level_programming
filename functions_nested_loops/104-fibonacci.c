@@ -11,9 +11,9 @@ int main(void)
 {
 	int i;
 
-	long double a;
-	long double b;
-	long double tmp;
+	uint64_t a;
+	uint64_t b;
+	uint64_t tmp;
 
 	a = 1.0;
 	b = 2.0;
@@ -25,12 +25,10 @@ int main(void)
 		b = b + a;
 		a = tmp;
 
-		if (i >= 90 && i != 95)
-			printf("%.0Lf, ", b);
-		else if (i != 95)
-			printf("%.0Lf, ", b);
+		if (i != 95)
+			printf("%lu, ", b);
 		else
-			printf("%.0Lf\n", b);
+			printf("%lu", b);
 	}
 	return (0);
 }
