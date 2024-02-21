@@ -4,11 +4,22 @@
 #endif
 
 /**
- *  - asdfg
- *
+ * _strcpy - asdfg
+ * @dest: asdfg
+ * @src: asdfg
  * Return: asdfg
  */
- (void)
+char *_strcpy(char *dest, char *src)
 {
-	return (0);
+	int i;
+
+	for (i = 0; *src; src++)
+	{
+		*dest = *src;
+		dest = dest + 1;
+		i = i + 1;
+	}
+	*dest = *src;
+	dest = dest - i;
+	return (dest);
 }
