@@ -1,0 +1,14 @@
+#ifndef HEADER_FILE
+#define HEADER_FILE
+#include "main.h"
+#endif
+
+/**
+ *  - asdfg
+ *
+ * Return: asdfg
+ */
+ (void)
+{
+	return (0);
+}
