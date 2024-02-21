@@ -4,11 +4,12 @@
 #endif
 
 /**
- *  - asdfg
+ * reset_to_98 - asdfg
+ * @n: asdfg
  *
  * Return: asdfg
  */
- (void)
+void reset_to_98(int *n)
 {
-	return (0);
+	*n = 98;
 }
