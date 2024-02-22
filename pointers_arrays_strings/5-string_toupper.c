@@ -4,11 +4,19 @@
 #endif
 
 /**
- *  - asdfg
- *
+ * string_toupper - asdfg
+ * @c: asdfg
  * Return: asdfg
  */
- (void)
+char *string_toupper(char *c)
 {
-	return (0);
+	int i;
+
+	for (i = 0; *c; c++)
+	{
+		if (*c >= 97 && *c <= 122)
+			*c = *c - 32;
+		i += 1;
+	}
+	return (c - i);
 }
