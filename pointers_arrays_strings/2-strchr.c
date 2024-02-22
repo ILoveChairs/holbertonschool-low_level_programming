@@ -11,5 +11,14 @@
  */
 char *_strchr(char *s, char c)
 {
+	int i;
+
+	for (i = 0; *s; s++)
+	{
+		if (*s == c)
+			return (s);
+		i += 1;
+	}
+
 	return (0);
 }
