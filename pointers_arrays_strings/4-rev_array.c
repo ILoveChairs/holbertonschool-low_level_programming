@@ -4,11 +4,26 @@
 #endif
 
 /**
- *  - asdfg
- *
- * Return: asdfg
+ * reverse_array - asdfg
+ * @a: asdfg
+ * @n: asdfg
  */
- (void)
+void reverse_array(int *a, int n)
 {
-	return (0);
+	int tmp[1024] = {0};
+	
+	int i;
+
+	for (i = 0; i < n; a++)
+	{
+		tmp[i] = *a;
+		i += 1;
+	}
+
+	a -= i;
+	for (; i >= 0; a++)
+	{
+		*a = tmp[i - 1];
+		i -= 1;
+	}
 }
