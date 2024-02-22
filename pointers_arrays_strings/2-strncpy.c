@@ -14,31 +14,39 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
 	int l;
-	char foo;
-	char bar;
-	char tmp[1024];
-	int booler = 1;
+	int len;
+	int aft_bool;
 
-	i = 0;
-	for (l = 0; *src && l < n; src++)
-		tmp[l] = *src;
+	char tmp[1024] = {0};
 
-	for (x = 0; x <= n; x++)
-	{
-		
-		for (bar = 2; booler; dest++)
-		{
-			foo = *dest;
-			*dest = bar;
-			bar = foo;
-			i += 1;
-		}
-		dest = dest - i + 1;
-	}
-	dest = dest - i;
+	aft_bool = 0;
+
 	for (i = 0; *dest; dest++)
 	{
-		i = i + 1;
+		tmp[i] = *dest;
+		i += 1;
+	}
+	len = i;
+	dest -= i;
+
+	for (i = 0; i < n; src++)
+	{
+		if (!*src)
+			aft_bool = 1;
+
+		if (aft_bool)
+			*dest = 0;
+		else
+			*dest = *src;
+		dest += 1;
+		i += 1;
+	}
+
+	for (l = i; l < len; l++)
+	{
+		*dest = tmp[l];
+		dest += 1;
+		i += 1;
 	}
 	return (dest - i);
 }
