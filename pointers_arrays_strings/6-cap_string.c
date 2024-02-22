@@ -38,14 +38,11 @@ char *cap_string(char *c)
 	{
 		char cc = *c;
 
-		if ((cc >= 65 && cc) || (cc >= 97 && cc <= 122))
+		if (new_bool)
 		{
-			if (new_bool)
-			{
-				if (cc >= 97 && cc <= 122)
-					*c = *c - 32;
-				new_bool = 0;
-			}
+			if (cc >= 97 && cc <= 122)
+				*c = *c - 32;
+			new_bool = 0;
 		}
 		else if (_check_if_separator(cc))
 			new_bool = 1;
