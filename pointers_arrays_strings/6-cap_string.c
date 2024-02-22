@@ -4,8 +4,9 @@
 #endif
 
 /**
-  * 
-  *
+  * _check_if_separator - asdfg
+  * @c: asdfg
+  * Return: asdfg
   */
 int _check_if_separator(char c)
 {
@@ -36,6 +37,7 @@ char *cap_string(char *c)
 	for (i = 0; *c; c++)
 	{
 		char cc = *c;
+
 		if ((cc >= 65 && cc) || (cc >= 97 && cc <= 122))
 		{
 			if (new_bool)
