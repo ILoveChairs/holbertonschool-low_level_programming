@@ -4,11 +4,10 @@
 #endif
 
 /**
- *  - asdfg
- *
- * Return: asdfg
+ * print_chessboard - asdfg
+ * @a: asdfg
  */
- (void)
+void print_chessboard(char (*a)[8])
 {
 	return (0);
 }

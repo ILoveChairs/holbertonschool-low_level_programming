@@ -4,11 +4,12 @@
 #endif
 
 /**
- *  - asdfg
- *
+ * _strpbrk - asdfg
+ * @s: asdfg
+ * @accept: asdfg
  * Return: asdfg
  */
- (void)
+char *_strpbrk(char *s, char *accept)
 {
 	return (0);
 }

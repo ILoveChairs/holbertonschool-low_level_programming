@@ -4,11 +4,20 @@
 #endif
 
 /**
- *  - asdfg
- *
+ * _memset - asdfg
+ * @s: asdfg
+ * @b: asdfg
+ * @n: asdfg
  * Return: asdfg
  */
- (void)
+char *_memset(char *s, char b, unsigned int n)
 {
-	return (0);
+	unsigned int i;
+
+	for (i = 0; i < n; s++)
+	{
+		*s = b;
+		i += 1;
+	}
+	return (s - i);
 }

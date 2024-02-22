@@ -4,11 +4,11 @@
 #endif
 
 /**
- *  - asdfg
- *
- * Return: asdfg
+ * print_diagsums - asdfg
+ * @a: asdfg
+ * @size: asdfg
  */
- (void)
+void print_diagsums(int *a, int size)
 {
 	return (0);
 }

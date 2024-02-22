@@ -4,11 +4,13 @@
 #endif
 
 /**
- *  - asdfg
- *
+ * _memcpy - asdfg
+ * @dest: asdfg
+ * @src: asdfg
+ * @n: asdfg
  * Return: asdfg
  */
- (void)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	return (0);
 }

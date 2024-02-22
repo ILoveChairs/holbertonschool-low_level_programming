@@ -4,11 +4,12 @@
 #endif
 
 /**
- *  - asdfg
- *
+ * _strstr - asdfg
+ * @haystack: asdfg
+ * @needle: asdfg
  * Return: asdfg
  */
- (void)
+char *_strstr(char *haystack, char *needle)
 {
 	return (0);
 }

@@ -4,11 +4,12 @@
 #endif
 
 /**
- *  - asdfg
- *
+ * _strspn - asdfg
+ * @s: asdfg
+ * @accept: asdfg
  * Return: asdfg
  */
- (void)
+unsigned int _strspn(char *s, char *accept)
 {
 	return (0);
 }
