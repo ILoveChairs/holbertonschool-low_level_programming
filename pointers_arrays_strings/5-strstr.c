@@ -16,6 +16,7 @@ char *_strstr(char *haystack, char *needle)
 	int l;
 
 	r = 0;
+	l = 0;
 	for (i = 0; *haystack; haystack++)
 	{
 		if (*haystack == needle[l])
@@ -29,6 +30,7 @@ char *_strstr(char *haystack, char *needle)
 		else
 		{
 			l = 0;
+			r = 0;
 		}
 		if (l == sizeof(*needle) / sizeof(char) || needle[l] == '\0')
 			return (haystack - (i - r));
