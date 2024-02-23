@@ -10,5 +10,13 @@
  */
 int is_prime_number(int n)
 {
+	int x;
+
+	if (n == 1)
+		return (2);
+	if ()
+	{
+
+	}
 	return (0);
 }
