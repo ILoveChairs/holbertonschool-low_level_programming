@@ -11,5 +11,28 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	return (0);
+	int i;
+	int r;
+	int l;
+
+	for (i = 0; *haystack; haystack++)
+	{
+		if (*haystack == needle[l])
+		{
+			if (r == 0)
+			{
+				l += 1;
+				r = i;
+			}
+		}
+		else
+		{
+			l = 0;
+			r = 0;
+		}
+		if (l == sizeof(*needle) / sizeof(char))
+			return (haystack - (i - r));
+		i += 1;
+	}
+	return ('\0');
 }
