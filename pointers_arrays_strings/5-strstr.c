@@ -15,22 +15,22 @@ char *_strstr(char *haystack, char *needle)
 	int r;
 	int l;
 
+	r = 0;
 	for (i = 0; *haystack; haystack++)
 	{
 		if (*haystack == needle[l])
 		{
+			l += 1;
 			if (r == 0)
 			{
-				l += 1;
 				r = i;
 			}
 		}
 		else
 		{
 			l = 0;
-			r = 0;
 		}
-		if (l == sizeof(*needle) / sizeof(char) || l == '\0')
+		if (l == sizeof(*needle) / sizeof(char) || needle[l] == '\0')
 			return (haystack - (i - r));
 		i += 1;
 	}
