@@ -30,7 +30,7 @@ char *_strstr(char *haystack, char *needle)
 			l = 0;
 			r = 0;
 		}
-		if (l == sizeof(*needle) / sizeof(char))
+		if (l == sizeof(*needle) / sizeof(char) || l == '\0')
 			return (haystack - (i - r));
 		i += 1;
 	}
