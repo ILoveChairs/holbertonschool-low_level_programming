@@ -3,6 +3,7 @@
 #include "main.h"
 #endif
 
+
 /**
  * _strstr - asdfg
  * @haystack: asdfg
@@ -17,15 +18,15 @@ char *_strstr(char *haystack, char *needle)
 
 	r = 0;
 	l = 0;
-	for (i = 0; *haystack; haystack++)
+	for (i = 0; haystack[i]; i++)
 	{
-		if (*haystack == needle[l])
+		if (haystack[i] == needle[l])
 		{
-			l += 1;
 			if (r == 0)
 			{
 				r = i;
 			}
+			l += 1;
 		}
 		else
 		{
@@ -33,10 +34,8 @@ char *_strstr(char *haystack, char *needle)
 			r = 0;
 		}
 
-		if (l == sizeof(*needle) / sizeof(char) || needle[l] == '\0')
-			return (haystack - (i - r));
-
-		i += 1;
+		if (needle[l] == '\0')
+			return (haystack + r);
 	}
-	return ('\0');
+	return (haystack + i);
 }
