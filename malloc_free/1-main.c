@@ -9,9 +9,9 @@
  */
 int main(void)
 {
-    char *s;
+	char *s;
 
-    s = _strdup("Duplicated");
+    s = _strdup(NULL);
     if (s == NULL)
     {
         printf("failed to allocate memory\n");
