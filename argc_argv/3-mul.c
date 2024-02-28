@@ -7,19 +7,19 @@
  * @argv: asdfg
  * Return: asdfg
  */
-int main(int argc, char *argv[])
+int main(int ac, char *av[])
 {
 	int a;
 	int b;
 	int out;
 
-	if (argc != 3)
+	if (ac != 3)
 	{
 		puts("Error");
 		return (1);
 	}
-	a = atoi(argv[1]);
-	b = atoi(argv[2]);
+	a = atoi(av[1]);
+	b = atoi(av[2]);
 	out = a * b;
 
 	printf("%d\n", out);

@@ -9,6 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
+	int arr[25];
 	int i;
 	int out;
 
@@ -18,11 +19,14 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	out = 0;
-	for (i = 1; i < argc; i++)
+	for (i = 0; i < argc; i++)
 	{
 		out += atoi(argv[i]);
 	}
 
+	for (i = 0)
+	{
+	}
 	printf("%d\n", out);
 	return (0);
 }
