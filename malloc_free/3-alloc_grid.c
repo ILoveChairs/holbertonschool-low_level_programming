@@ -1,12 +1,14 @@
-#include <stdlib.h>
+#ifndef HEADER_FILE
+#define HEADER_FILE
+#include "main.h"
+#endif
 
 /**
-* main - description
-*
-*
-* Return: description
-*/
-int main(void)
+ *  - asdfg
+ *
+ * Return: asdfg
+ */
+ (void)
 {
-	
+	return (0);
 }
