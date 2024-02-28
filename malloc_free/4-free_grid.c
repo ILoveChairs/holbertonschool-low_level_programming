@@ -1,5 +1,6 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
+#include <stdlib.h>
 #include "main.h"
 #endif
 
@@ -10,5 +11,11 @@
  */
 void free_grid(int **grid, int height)
 {
-	return (0);
+	int i;
+
+	for (i = height - 1; i != -1; i--)
+	{
+		free(grid[i]);
+	}
+	free(grid);
 }
