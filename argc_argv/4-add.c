@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - asdfg
@@ -9,8 +10,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int arr[25];
 	int i;
+	int l;
 	int out;
 
 	if (argc < 3)
@@ -18,14 +19,19 @@ int main(int argc, char *argv[])
 		puts("Error");
 		return (1);
 	}
-	out = 0;
-	for (i = 0; i < argc; i++)
+	
+	for (i = 1; i < argc; i++)
 	{
-		out += atoi(argv[i]);
-	}
+		for (l = 0; argv[i][l]; l++)
+		{
+			if (!isdigit(argv[i][l]))
+			{
+				puts("Error");
+	 			return (1);
+			}
+		}
 
-	for (i = 0)
-	{
+		out += atoi(argv[i]);
 	}
 	printf("%d\n", out);
 	return (0);
