@@ -14,12 +14,7 @@ int main(int argc, char *argv[])
 	int l;
 	int out;
 
-	if (argc < 3)
-	{
-		puts("Error");
-		return (1);
-	}
-	
+	out = 0;
 	for (i = 1; i < argc; i++)
 	{
 		for (l = 0; argv[i][l]; l++)
