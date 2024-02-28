@@ -4,11 +4,11 @@
 #endif
 
 /**
- *  - asdfg
- *
- * Return: asdfg
+ * free_grid - asdfg
+ * @grid: asdfg
+ * @height: asdfg
  */
- (void)
+void free_grid(int **grid, int height)
 {
 	return (0);
 }

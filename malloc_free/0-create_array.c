@@ -4,11 +4,18 @@
 #endif
 
 /**
- *  - asdfg
- *
+ * create_array - asdfg
+ * @size: asdfg
+ * @c: asdfg
  * Return: asdfg
  */
- (void)
+char *create_array(unsigned int size, char c)
 {
-	return (0);
+	char *s;
+
+	if (size == 0)
+		return (0);
+
+	s = malloc();
+	return (s);
 }

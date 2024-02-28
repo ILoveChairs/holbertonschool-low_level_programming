@@ -4,11 +4,11 @@
 #endif
 
 /**
- *  - asdfg
- *
+ * _strdup - asdfg
+ * @str: asdfg
  * Return: asdfg
  */
- (void)
+char *_strdup(char *str)
 {
 	return (0);
 }

@@ -4,11 +4,12 @@
 #endif
 
 /**
- *  - asdfg
- *
+ * alloc_grid - asdfg
+ * @width: asdfg
+ * @height: asdfg
  * Return: asdfg
  */
- (void)
+int **alloc_grid(int width, int height)
 {
 	return (0);
 }

@@ -4,11 +4,12 @@
 #endif
 
 /**
- *  - asdfg
- *
+ * str_concat - asdfg
+ * @s1: asdfg
+ * @s2: asdfg
  * Return: asdfg
  */
- (void)
+char *str_concat(char *s1, char *s2)
 {
 	return (0);
 }
