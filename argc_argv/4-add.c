@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 			if (!isdigit(argv[i][l]))
 			{
 				puts("Error");
-	 			return (1);
+				return (1);
 			}
 		}
 
