@@ -1,14 +1,31 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
+#include <stdlib.h>
 #include "main.h"
 #endif
 
 /**
- *  - asdfg
- *
+ * array_range - asdfg
+ * @min: asdfg
+ * @max: asdfg
  * Return: asdfg
  */
- (void)
+int *array_range(int min, int max)
 {
-	return (0);
+	int *arr;
+	int i;
+
+	i = min;
+
+	arr = malloc(sizeof(int) * (max - min + 1));
+
+	if (!arr)
+		return(NULL);
+
+	for (i = 0; i < max; i++)
+	{
+		arr[i] = i;
+	}
+
+	return (arr);
 }
