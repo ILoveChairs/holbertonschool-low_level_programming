@@ -1,14 +1,20 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
+#include <stdlib.h>
 #include "main.h"
 #endif
 
 /**
- *  - asdfg
- *
+ * malloc_checked - asdfg
+ * @b: asdfg
  * Return: asdfg
  */
- (void)
+void *malloc_checked(unsigned int b)
 {
-	return (0);
+	unsigned int *arr;
+
+	arr = malloc(b);
+	if (!arr)
+		exit(98);
+	return (arr);
 }
