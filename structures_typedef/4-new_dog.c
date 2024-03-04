@@ -2,7 +2,6 @@
 #define PRRUM
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 #include "dog.h"
 #endif
 
@@ -18,19 +17,27 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t dog;
 	dog_t *dogp;
+	char *namep;
+	char *ownerp;
+
+	namep = "";
+	ownerp = "";
+
+	strcpy(namep, name);
+	strcpy(ownerp, owner);
 
 	dog.age = age;
-	dog.name = name;
-	dog.owner = owner;
+	dog.name = namep;
+	dog.owner = ownerp;
 
 	dogp = malloc(sizeof(dog));
 
 	if (!dogp)
 		return (NULL);
-	
+
 	dogp->age = age;
-	dogp->name = name;
-	dogp->owner = owner;
+	dogp->name = namep;
+	dogp->owner = ownerp;
 
 	return (dogp);
 }
