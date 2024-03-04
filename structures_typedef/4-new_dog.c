@@ -23,6 +23,27 @@ unsigned int _strlen(char *c)
 }
 
 /**
+ * _strcpy - asdfg
+ * @dest: asdfg
+ * @src: asdfg
+ * Return: asdfg
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int i;
+        
+	for (i = 0; *src; src++)
+	{
+		*dest = *src;
+		dest = dest + 1;
+		i = i + 1;
+	}
+	*dest = *src;
+	dest = dest - i;
+	return (dest);
+}
+
+/**
   * new_dog - asdfg
   * @name: asdfg
   * @age: asdfg
@@ -48,8 +69,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	strcpy(namep, name);
-	strcpy(ownerp, owner);
+	_strcpy(namep, name);
+	_strcpy(ownerp, owner);
 
 	dog.age = age;
 	dog.name = namep;
