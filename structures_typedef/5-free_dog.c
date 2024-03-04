@@ -11,7 +11,10 @@
   */
 void free_dog(dog_t *d)
 {
-	if (!d->age)
-		free(&d->age);
-	free(d);
+	if (d)
+	{
+		if (!d->age)
+			free(&d->age);
+		free(d);
+	}
 }
