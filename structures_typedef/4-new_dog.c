@@ -6,6 +6,23 @@
 #endif
 
 /**
+  * _strlen - asdfg
+  * @c: asdfg
+  *
+  * Return: asdfg
+  */
+unsigned int _strlen(char *c)
+{
+	unsigned int i;
+
+	for (i = 0; *c; c++)
+	{
+		i++;
+	}
+	return (i);
+}
+
+/**
   * new_dog - asdfg
   * @name: asdfg
   * @age: asdfg
@@ -20,11 +37,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *namep;
 	char *ownerp;
 
-	namep = malloc(sizeof(char) * strlen(name));
+	namep = malloc(sizeof(char) * _strlen(name));
 	if (!namep)
 		return (NULL);
 
-	ownerp = malloc(sizeof(char) * strlen(owner));
+	ownerp = malloc(sizeof(char) * _strlen(owner));
 	if (!ownerp)
 	{
 		free(namep);
