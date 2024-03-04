@@ -31,7 +31,7 @@ unsigned int _strlen(char *c)
 char *_strcpy(char *dest, char *src)
 {
 	int i;
-        
+
 	for (i = 0; *src; src++)
 	{
 		*dest = *src;
@@ -58,11 +58,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *namep;
 	char *ownerp;
 
-	namep = malloc(sizeof(char) * _strlen(name));
+	namep = malloc(sizeof(char) * _strlen(name) + 1);
 	if (!namep)
 		return (NULL);
 
-	ownerp = malloc(sizeof(char) * _strlen(owner));
+	ownerp = malloc(sizeof(char) * _strlen(owner) + 1);
 	if (!ownerp)
 	{
 		free(namep);
