@@ -1,6 +1,8 @@
 #ifndef OP_FUNCTIONS
 #define OP_FUNCTIONS
 #include "3-calc.h"
+#include <stdlib.h>
+#include <stdio.h>
 #endif
 
 /**
@@ -48,6 +50,11 @@ int op_mul(int a, int b)
   */
 int op_div(int a, int b)
 {
+	if (b == 0)
+	{
+		puts("Error");
+		exit(100);
+	}
 	return (a / b);
 }
 

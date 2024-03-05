@@ -25,17 +25,17 @@ int main(int argc, char **argv)
 	if (argc != 4)
 	{
 		puts("Error");
-		return (1);
+		return (98);
 	}
 
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 	s = argv[2];
 
-	if (!(strlen(s) == 1 || strlen(s) == 3))
+	if (strlen(s) != 1)
 	{
 		puts("Error");
-		return (1);
+		return (99);
 	}
 
 	function = (*get_op_func(s));
@@ -43,7 +43,7 @@ int main(int argc, char **argv)
 	if (!function)
 	{
 		puts("Error");
-		return (1);
+		return (99);
 	}
 
 	result = (function)(a, b);
