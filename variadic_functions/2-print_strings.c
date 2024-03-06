@@ -8,9 +8,18 @@
 void _print_str(char *str)
 {
 	int i;
+	const char *niller = "(nil)";
 
-	for (i = 0; str[i]; i++)
-		putchar(str[i]);
+	if (str == NULL)
+	{
+		for (i = 0; niller[i]; i++)
+			putchar(niller[i]);
+	}
+	else
+	{
+		for (i = 0; str[i]; i++)
+			putchar(str[i]);
+	}
 }
 
 /**
