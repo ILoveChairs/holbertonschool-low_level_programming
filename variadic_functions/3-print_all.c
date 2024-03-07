@@ -21,10 +21,8 @@ void _print_str(va_list args)
 	char *str;
 
 	str = va_arg(args, char*);
-	if (str == NULL)
-	{
+	if (!str)
 		str = "(nil)";
-	}
 	printf("%s", str);
 }
 
@@ -55,34 +53,35 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	unsigned int i;
-	unsigned int l;
-
-	functioner funcs[] = {
-		{"c", _print_char},
-		{"s", _print_str},
-		{"i", _print_int},
-		{"f", _print_float},
-		{NULL, NULL}
-	};
+	unsigned int printed_flag;
 
 	va_start(args, format);
 
 	i = 0;
 	while (format[i])
 	{
-		l = 0;
-		while (funcs[l].type)
-		{
-			if (*funcs[l].type == format[i])
-			{
-				funcs[l].func(args);
-				if (format[i + 1])
-				{
-					printf(", ");
-				}
+		printed_flag = 0;
+		switch (format[i]) {
+			case 'c':
+				_print_char(args);
+				printed_flag = 1;
 				break;
-			}
-			l++;
+			case 's':
+				_print_str(args);
+				printed_flag = 1;
+				break;
+			case 'i':
+				_print_int(args);
+				printed_flag = 1;
+				break;
+			case 'f':
+				_print_float(args);
+				printed_flag = 1;
+				break;
+		}
+		if (format[i + 1] && printed_flag)
+		{
+			printf(", ");
 		}
 		i++;
 	}
