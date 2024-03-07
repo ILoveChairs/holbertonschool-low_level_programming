@@ -58,7 +58,6 @@ void print_all(const char * const format, ...)
 	while (format)
 	{
 		va_start(args, format);
-
 		i = 0;
 		while (format[i])
 		{
@@ -83,18 +82,11 @@ void print_all(const char * const format, ...)
 				break;
 			}
 			if (format[i + 1] && printed_flag)
-			{
 				printf(", ");
-			}
 			i++;
 		}
-
 		va_end(args);
 		break;
 	}
 	putchar('\n');
 }
-
-
-
-
