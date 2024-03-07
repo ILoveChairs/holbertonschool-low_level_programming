@@ -55,13 +55,16 @@ void print_all(const char * const format, ...)
 	unsigned int i;
 	unsigned int printed_flag;
 
-	va_start(args, format);
-
-	i = 0;
-	while (format[i])
+	while (format)
 	{
-		printed_flag = 0;
-		switch (format[i]) {
+		va_start(args, format);
+
+		i = 0;
+		while (format[i])
+		{
+			printed_flag = 0;
+				switch (format[i])
+			{
 			case 'c':
 				_print_char(args);
 				printed_flag = 1;
@@ -78,15 +81,17 @@ void print_all(const char * const format, ...)
 				_print_float(args);
 				printed_flag = 1;
 				break;
+			}
+			if (format[i + 1] && printed_flag)
+			{
+				printf(", ");
+			}
+			i++;
 		}
-		if (format[i + 1] && printed_flag)
-		{
-			printf(", ");
-		}
-		i++;
-	}
 
-	va_end(args);
+		va_end(args);
+		break;
+	}
 	putchar('\n');
 }
 
