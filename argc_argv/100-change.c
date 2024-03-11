@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
+ * calculate_cents - does the calc
+ * @cents: int
  *
- *
- *
- *
+ * Return: result
  */
 int calculate_cents(int cents)
 {
@@ -30,9 +30,11 @@ int calculate_cents(int cents)
 }
 
 /**
+ * main - does things
+ * @argc: n of args
+ * @argv: list of args
  *
- *
- *
+ * Return: 0 if good, 1 if you messed up
  */
 int main(int argc, char **argv)
 {
