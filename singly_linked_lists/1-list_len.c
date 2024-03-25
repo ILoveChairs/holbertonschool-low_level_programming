@@ -1,16 +1,27 @@
 #include "lists.h"
 
 /**
- *  - asdfg
+ * list_len - asdfg
  *
- * @: asdfg
- * @: asdfg
+ * @h: asdfg
  *
  * Return: asdfg
  */
-
+size_t list_len(const list_t *h)
 {
-	list_t *head;
+	list_t *current;
+	int i;
 
-	return ();
+	if (!h)
+	{
+		return (0);
+	}
+
+	current = h->next;
+	for (i = 1; current; i++)
+	{
+		current = current->next;
+	}
+
+	return (i);
 }
