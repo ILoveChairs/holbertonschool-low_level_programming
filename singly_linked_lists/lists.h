@@ -11,7 +11,8 @@
  *
  * @next: asdfg
  */
-typedef struct list_t {
+typedef struct list_t
+{
 	char *str;
 	int len;
 	struct list_t *next;

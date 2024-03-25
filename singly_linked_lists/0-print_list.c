@@ -13,6 +13,9 @@ size_t print_list(const list_t *h)
 	list_t *current;
 	size_t i;
 
+	if (!h)
+		return (0);
+
 	if (h->str)
 		printf("[%i] %s\n", h->len, h->str);
 	else
