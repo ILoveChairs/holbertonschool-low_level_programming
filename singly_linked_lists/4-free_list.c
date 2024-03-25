@@ -1,16 +1,26 @@
 #include "lists.h"
+#include <stdlib.h>
 
 /**
- *  - asdfg
+ * free_list - asdfg
  *
- * @: asdfg
- * @: asdfg
- *
- * Return: asdfg
+ * @head: asdfg
  */
-
+void free_list(list_t *head)
 {
-	list_t *head;
+	list_t *current;
 
-	return ();
+	if (!head)
+		return;
+
+	while(head->next)
+	{
+		free(head->str);
+		current = head;
+		head = head->next;
+		free(current);
+	}
+
+	free(head->str);
+	free(head);
 }
