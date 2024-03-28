@@ -1,16 +1,18 @@
 #include "lists.h"
 
 /**
- *  - asdfg
+ *  add_dnodeint- asdfg
  *
- * @: asdfg
- * @: asdfg
+ * @head: asdfg
+ * @n: asdfg
  *
  * Return: asdfg
  */
-
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	list_t *head;
+	list_t *;
 
-	return ();
+
+
+	return (*head);
 }

@@ -1,16 +1,18 @@
 #include "lists.h"
 
 /**
- *  - asdfg
+ * dlistint_len - asdfg
  *
- * @: asdfg
- * @: asdfg
+ * @h: asdfg
  *
- * Return: asdfg
+ * Return: len
  */
-
+size_t dlistint_len(const dlistint_t *h)
 {
-	list_t *head;
+	list_t *;
+	size_t len;
 
-	return ();
+
+
+	return (len);
 }

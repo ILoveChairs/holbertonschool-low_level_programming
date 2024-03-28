@@ -1,16 +1,13 @@
 #include "lists.h"
 
 /**
- *  - asdfg
+ *  free_dlistint- asdfg
  *
- * @: asdfg
- * @: asdfg
- *
- * Return: asdfg
+ * @head: asdfg
  */
-
+void free_dlistint(dlistint_t *head)
 {
 	list_t *head;
 
-	return ();
+	free();
 }

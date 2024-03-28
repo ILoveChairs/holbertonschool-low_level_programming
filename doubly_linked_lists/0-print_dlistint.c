@@ -1,16 +1,32 @@
 #include "lists.h"
+#include <stdio.h>
+#include <stddef.h>
 
 /**
- *  - asdfg
+ * print_dlistint - asdfg
  *
- * @: asdfg
- * @: asdfg
+ * @head: asdfg
+ * @index: asdfg
  *
  * Return: asdfg
  */
-
+size_t print_dlistint(const dlistint_t *h)
 {
-	list_t *head;
+	size_t len;
 
-	return ();
+	len = 0;
+	if (!h)
+		return (len);
+
+	while (h->next)
+	{
+		printf("%d\n", h->n);
+		h = h->next;
+		len++;
+	}
+
+	printf("%d\n", h->n);
+	len++;
+
+	return (len);
 }

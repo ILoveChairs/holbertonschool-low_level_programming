@@ -1,16 +1,18 @@
 #include "lists.h"
 
 /**
- *  - asdfg
+ *  get_dnodeint_at_index- asdfg
  *
- * @: asdfg
- * @: asdfg
+ * @head: asdfg
+ * @index: asdfg
  *
  * Return: asdfg
  */
-
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	list_t *head;
 
-	return ();
+
+
+	return (head);
 }

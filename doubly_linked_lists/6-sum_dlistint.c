@@ -1,16 +1,18 @@
 #include "lists.h"
 
 /**
- *  - asdfg
+ * sum_dlistint - asdfg
  *
- * @: asdfg
- * @: asdfg
+ * @head: asdfg
  *
  * Return: asdfg
  */
-
+int sum_dlistint(dlistint_t *head)
 {
-	list_t *head;
+	list_t *;
+	int i;
 
-	return ();
+
+
+	return (i);
 }

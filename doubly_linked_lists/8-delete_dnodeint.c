@@ -1,16 +1,19 @@
 #include "lists.h"
 
 /**
- *  - asdfg
+ * delete_dnodeint_at_index - asdfg
  *
- * @: asdfg
- * @: asdfg
+ * @head: asdfg
+ * @index: asdfg
  *
  * Return: asdfg
  */
-
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	list_t *head;
+	list_t *;
+	int i;
 
-	return ();
+
+
+	return (i);
 }
