@@ -9,10 +9,18 @@
  */
 int sum_dlistint(dlistint_t *head)
 {
-	list_t *;
+	dlistint_t *current;
 	int i;
 
+	i = 0;
+	current = head;
+	while (current->next)
+	{
+		i += current->n;
+		current = current->next;
+	}
 
+	i += current->n;
 
 	return (i);
 }
