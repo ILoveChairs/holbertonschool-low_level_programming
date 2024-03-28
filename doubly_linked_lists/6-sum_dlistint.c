@@ -13,7 +13,7 @@ int sum_dlistint(dlistint_t *head)
 	int i;
 
 	if (!head)
-		return (0)
+		return (0);
 
 	i = 0;
 	current = head;
