@@ -3,12 +3,11 @@
 #include <stddef.h>
 
 /**
- * print_dlistint - asdfg
+ * print_dlistint - print n, return len
  *
- * @head: asdfg
- * @index: asdfg
+ * @h: head
  *
- * Return: asdfg
+ * Return: (Len)
  */
 size_t print_dlistint(const dlistint_t *h)
 {
