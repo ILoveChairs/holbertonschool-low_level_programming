@@ -9,10 +9,19 @@
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-	list_t *;
 	size_t len;
 
+	len = 0;
+	if (!h)
+		return (len);
 
+	while (h->next)
+	{
+		h = h->next;
+		len++;
+	}
+
+	len++;
 
 	return (len);
 }
