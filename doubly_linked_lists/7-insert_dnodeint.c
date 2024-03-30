@@ -68,17 +68,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	for (i = 0; (*h)->next; i++)
 	{
 		if (i == idx)
-		{
 			output = insert_dnodeint(h, n);
-		}
 
 		*h = (*h)->next;
 	}
-
+	if (i == idx)
+		output = insert_dnodeint(h, n);
 	if (++i == idx)
-	{
 		output = add_dnodeint_end(h, n);
-	}
 
 	dnodeint_go_head(h);
 	return (output);
