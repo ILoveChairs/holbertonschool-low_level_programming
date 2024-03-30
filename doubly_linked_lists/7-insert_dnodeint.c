@@ -30,6 +30,8 @@ dlistint_t *insert_dnodeint(dlistint_t **h, int n)
 
 	new = malloc(sizeof(dlistint_t));
 
+	*h = (*h)->prev;
+
 	new->n = n;
 	new->prev = *h;
 	new->next = (*h)->next;
