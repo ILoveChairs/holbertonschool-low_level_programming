@@ -2,6 +2,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * _whiler - asdfg
@@ -29,10 +30,10 @@ ssize_t _whiler(int fd, char *buffer, ssize_t letters)
 			break;
 
 		if ((ssize_t)letters > wrote_total + bytes_read)
-			bytes_wrote = write(1, buffer, bytes_read);
+			bytes_wrote = write(STDOUT_FILENO, buffer, bytes_read);
 		else
 		{
-			bytes_wrote = write(1, buffer, letters - wrote_total);
+			bytes_wrote = write(STDOUT_FILENO, buffer, letters - wrote_total);
 			wrote_total += bytes_wrote;
 			break;
 		}
