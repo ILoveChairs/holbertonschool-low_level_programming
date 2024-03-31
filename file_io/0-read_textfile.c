@@ -23,10 +23,7 @@ ssize_t _whiler(int fd, char *buffer, ssize_t letters)
 	{
 		bytes_read = read(fd, buffer, 1024);
 		if (bytes_read == -1)
-		{
-			close(fd);
 			return (0);
-		}
 
 		if (bytes_read == 0)
 			break;
@@ -35,13 +32,13 @@ ssize_t _whiler(int fd, char *buffer, ssize_t letters)
 			bytes_wrote = write(1, buffer, bytes_read);
 
 		else
+		{
 			bytes_wrote = write(1, buffer, letters - wrote_total);
+			break;
+		}
 
 		if (bytes_read != bytes_wrote)
-		{
-			close(fd);
 			return (0);
-		}
 
 		wrote_total += bytes_wrote;
 	}
@@ -65,9 +62,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (!filename)
 		return (0);
+
 	fd = open(filename, O_RDONLY);
+
 	if (fd == -1)
 		return (0);
+
 	buffer = malloc(1024);
 	if (!buffer)
 	{
