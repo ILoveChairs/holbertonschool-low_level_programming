@@ -31,15 +31,16 @@ ssize_t _whiler(int fd, char *buffer, ssize_t letters)
 		if ((ssize_t)letters > wrote_total + bytes_read)
 			bytes_wrote = write(1, buffer, bytes_read);
 		else
+		{
 			bytes_wrote = write(1, buffer, letters - wrote_total);
+			wrote_total += bytes_wrote;
+			break;
+		}
 
 		if (bytes_read != bytes_wrote)
 			return (0);
 
 		wrote_total += bytes_wrote;
-
-		if (wrote_total >= letters)
-			break;
 	}
 
 	return (wrote_total);
