@@ -7,7 +7,7 @@
  *
  * @index: asdfg
  *
- * Return:
+ * Return: asdfg
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
@@ -25,7 +25,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	if (i == index)
 		return ((n >> i) & 1);
 
-	return (-1);
+	return (0);
 }
 
 
