@@ -42,7 +42,7 @@ void _flush_buffer(char *buffer)
  *
  * Return: asdfg
  */
-int _fill_buffer(char* buffer, char *text_content)
+int _fill_buffer(char *buffer, char *text_content)
 {
 	unsigned int i;
 	unsigned int size;
@@ -64,7 +64,7 @@ int _fill_buffer(char* buffer, char *text_content)
  *
  * @fd: asdfg
  * @buffer: asdfg
- * @letters: asdfg
+ * @text_content: asdfg
  *
  * Return: asdfg
  */
@@ -95,10 +95,10 @@ ssize_t _whiler(int fd, char *buffer, char *text_content)
 }
 
 /**
- * read_textfile - asdfg
+ * create_file - asdfg
  *
  * @filename: asdfg
- * @letters: asdfg
+ * @text_content: asdfg
  *
  * Return: asdfg
  */
@@ -110,7 +110,7 @@ int create_file(const char *filename, char *text_content)
 	if (!filename)
 		return (-1);
 
-	fd = open(filename, O_CREAT|O_WRONLY|O_TRUNC, S_IRUSR + S_IWUSR);
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR + S_IWUSR);
 
 	if (fd == -1)
 		return (-1);
@@ -122,7 +122,8 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
-	_whiler(fd, buffer, text_content);
+	if (text_content)
+		_whiler(fd, buffer, text_content);
 
 	close(fd);
 	free(buffer);
