@@ -15,7 +15,7 @@ void _error100(int fd)
 {
 	char error[] = "Error: Can't close fd ";
 
-	write(STDERR_FILENO, error, strlen(error));
+	dprintf(STDERR_FILENO, "%s", error);
 
 	dprintf(STDERR_FILENO, "%d\n", fd);
 
@@ -43,13 +43,10 @@ void _error(int errno, char *arg)
 		exit(22);
 	}
 
-	write(STDERR_FILENO, error[errno - 97], strlen(error[errno - 97]));
+	dprintf(STDERR_FILENO, "%s", error[errno - 97]);
 
 	if (arg)
-	{
-		write(STDERR_FILENO, arg, strlen(arg));
-		write(STDERR_FILENO, "\n", 1);
-	}
+		dprintf(STDERR_FILENO, "%s\n", arg);
 
 	exit(errno);
 }
