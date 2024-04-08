@@ -136,7 +136,7 @@ int main(int argc, char **argv)
 	result = cp(rfd, wfd);
 	if (result == 98)
 		_error(98, argv[1]);
-	else if (result == 98)
+	else if (result == 99)
 		_error(99, argv[2]);
 
 	result = close(rfd);
