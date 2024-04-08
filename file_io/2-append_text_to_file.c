@@ -95,7 +95,7 @@ ssize_t _whiler(int fd, char *buffer, char *text_content)
 }
 
 /**
- * create_file - asdfg
+ * append_text_to_file - asdfg
  *
  * @filename: asdfg
  * @text_content: asdfg
