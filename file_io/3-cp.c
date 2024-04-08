@@ -7,42 +7,20 @@
 
 
 /**
- * _itoa - Turns int to newly allocated string.
+ * _error100 - Prints error 100
  *
- * @integer: Integer.
- *
- * Return: Newly allocated string.
+ * @fd: File descriptor
  */
-char *_itoa(int integer)
+void _error100(int integer)
 {
-	char *result;
-	int i;
-	int len;
-	int ends_on_0;
+	char error[] = "Error: Can't close fd ";
 
-	ends_on_0 = 0;
-	len = 0;
-	if (integer % 10 == 0)
-	{
-		len++;
-		ends_on_0 = 1;
-	}
-	for (i = integer; i != 0; i /= 10)
-		len++;
+	write(STDERR_FILENO, error, strlen(error));
 
-	result = malloc(len);
-	if (!result)
-		exit(96);
+	dprintf(STDERR_FILENO, "%d\n", integer);
 
-	for (i = len - 1; integer != 0; integer /= 10)
-		result[i--] = integer % 10 + 48;
-
-	if (ends_on_0)
-		result[i++] = 48;
-
-	return (result);
+	exit(100);
 }
-
 
 /**
  * _error - Prints error message and exits with errno flag.
@@ -71,7 +49,6 @@ void _error(int errno, char *arg)
 	{
 		write(STDERR_FILENO, arg, strlen(arg));
 		write(STDERR_FILENO, "\n", 1);
-		free(arg);
 	}
 
 	exit(errno);
@@ -162,10 +139,10 @@ int main(int argc, char **argv)
 
 	result = close(rfd);
 	if (result == -1)
-		_error(100, _itoa(rfd));
+		_error100(rfd);
 	wfd = close(wfd);
 	if (result == -1)
-		_error(100, _itoa(wfd));
+		_error100(wfd);
 
 	return (0);
 }
