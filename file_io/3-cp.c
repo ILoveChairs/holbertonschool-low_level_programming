@@ -17,7 +17,7 @@ void _error100(int fd)
 
 	write(STDERR_FILENO, error, strlen(error));
 
-	dprintf(STDERR_FILENO, "%d\n", integer);
+	dprintf(STDERR_FILENO, "%d\n", fd);
 
 	exit(100);
 }
