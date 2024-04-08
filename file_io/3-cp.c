@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <string.h>
 
 
 /**
@@ -54,9 +55,9 @@ void _error(int errno, char *arg)
 {
 	char error[4][64] = {
 		"Usage: cp file_from file_to\n",
-		"Error: Can't read from file %s\n",
-		"Error: Can't write to %s\n",
-		"Error: Can't close fd %d\n"};
+		"Error: Can't read from file ",
+		"Error: Can't write to ",
+		"Error: Can't close fd "};
 
 	if (errno < 97 || errno > 100)
 	{
@@ -64,15 +65,14 @@ void _error(int errno, char *arg)
 		exit(22);
 	}
 
-	if (errno == 98 || errno == 99)
-		dprintf(STDERR_FILENO, error[errno - 97], *arg);
-	else if (errno == 100)
+	write(STDERR_FILENO, error[errno - 97], strlen(error[errno - 97]));
+
+	if (arg)
 	{
-		dprintf(STDERR_FILENO, error[errno - 97], *arg);
+		write(STDERR_FILENO, arg, strlen(arg));
+		write(STDERR_FILENO, "\n", 1);
 		free(arg);
 	}
-	else
-		dprintf(STDERR_FILENO, error[errno - 97], NULL);
 
 	exit(errno);
 }
