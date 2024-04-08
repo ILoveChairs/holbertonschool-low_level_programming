@@ -6,42 +6,74 @@
 
 
 /**
- * _strlen - Gets len of str.
+ * _itoa - Turns int to newly allocated string.
  *
- * @str: String
+ * @integer: Integer.
  *
- * Return: Len.
+ * Return: Newly allocated string.
  */
-unsigned int _strlen(char *str)
+char *_itoa(int integer)
 {
-	unsigned int i;
+	char *result;
+	int i;
+	int len;
+	int ends_on_0;
 
-	for (i = 0; str[i]; i++)
-		;
+	ends_on_0 = 0;
+	len = 0;
+	if (integer % 10 == 0)
+	{
+		len++;
+		ends_on_0 = 1;
+	}
+	for (i = integer; i != 0; i /= 10)
+		len++;
 
-	return (i);
+	result = malloc(len);
+	if (!result)
+		exit(96);
+
+	for (i = len - 1; integer != 0; integer /= 10)
+		result[i--] = integer % 10 + 48;
+
+	if (ends_on_0)
+		result[i++] = 48;
+
+	return (result);
 }
 
 
 /**
- * _error - asdfg
+ * _error - Prints error message and exits with errno flag.
  *
- * @errno: asdfg
+ * @errno: errno.
+ *
+ * @arg: Print error msg with arg.
  */
-void _error(int errno)
+void _error(int errno, char *arg)
 {
 	char error[4][64] = {
 		"Usage: cp file_from file_to\n",
-		"Error: Can't read from file NAME_OF_THE_FILE",
-		"Error: Can't write to NAME_OF_THE_FILE",
-		"Error: Can't close fd FD_VALUE"};
+		"Error: Can't read from file %s\n",
+		"Error: Can't write to %s\n",
+		"Error: Can't close fd %d\n"};
 
 	if (errno < 97 || errno > 100)
 	{
 		write(STDERR_FILENO, "_error Error: errno Error.\n", 27);
 		exit(22);
 	}
-	write(STDERR_FILENO, error[errno - 97], _strlen(error[errno - 97]));
+
+	if (errno == 98 || errno == 99)
+		dprintf(STDERR_FILENO, error[errno - 97], *arg);
+	else if (errno == 100)
+	{
+		dprintf(STDERR_FILENO, error[errno - 97], *arg);
+		free(arg);
+	}
+	else
+		dprintf(STDERR_FILENO, error[errno - 97], NULL);
+
 	exit(errno);
 }
 
@@ -62,8 +94,10 @@ void _flush_buffer(char *buffer)
  * @rfd: Read file descriptor.
  *
  * @wfd: Write file descriptor.
+ *
+ * Return: 0 if successful, errno if error.
  */
-void cp(int rfd, int wfd)
+int cp(int rfd, int wfd)
 {
 	ssize_t bytes_wrote;
 	ssize_t bytes_read;
@@ -75,7 +109,7 @@ void cp(int rfd, int wfd)
 
 		bytes_read = read(rfd, buffer, 1024);
 		if (bytes_read == -1)
-			_error(98);
+			return (98);
 
 		if (bytes_read == 0)
 			break;
@@ -83,11 +117,13 @@ void cp(int rfd, int wfd)
 		bytes_wrote = write(wfd, buffer, bytes_read);
 
 		if (bytes_read != bytes_wrote)
-			_error(99);
+			return (99);
 
 		if (bytes_read < 1024)
 			break;
 	}
+
+	return (0);
 }
 
 
@@ -104,25 +140,32 @@ int main(int argc, char **argv)
 {
 	int rfd;
 	int wfd;
+	int result;
 
 	if (argc != 3)
-		_error(97);
+		_error(97, NULL);
 
 	rfd = open(argv[1], O_RDONLY);
 	if (rfd == -1)
-		_error(98);
+		_error(98, argv[1]);
 
 	wfd = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC,
 			S_IWUSR + S_IRUSR + S_IRGRP + S_IWGRP + S_IROTH);
 	if (wfd == -1)
-		_error(99);
+		_error(99, argv[2]);
 
-	cp(rfd, wfd);
+	result = cp(rfd, wfd);
+	if (result == 98)
+		_error(98, argv[1]);
+	else if (result == 98)
+		_error(99, argv[2]);
 
-	rfd = close(rfd);
+	result = close(rfd);
+	if (result == -1)
+		_error(100, _itoa(rfd));
 	wfd = close(wfd);
-	if (rfd == -1 || wfd == -1)
-		_error(100);
+	if (result == -1)
+		_error(100, _itoa(wfd));
 
 	return (0);
 }
