@@ -11,7 +11,7 @@
  *
  * @fd: File descriptor
  */
-void _error100(int integer)
+void _error100(int fd)
 {
 	char error[] = "Error: Can't close fd ";
 
@@ -92,6 +92,8 @@ int cp(int rfd, int wfd)
 			break;
 
 		bytes_wrote = write(wfd, buffer, bytes_read);
+		if (bytes_wrote == -1)
+			return (99);
 
 		if (bytes_read != bytes_wrote)
 			return (99);
