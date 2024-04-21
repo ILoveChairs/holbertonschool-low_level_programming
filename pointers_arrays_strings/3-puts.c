@@ -1,18 +1,16 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
 #include "main.h"
-#endif
+
 
 /**
- * _puts - asdfg
- * @str: asdfg
+ * _puts - Prints a string to stdout using _putchar. Ends with new line.
+ *
+ * @str: String to print.
  */
 void _puts(char *str)
 {
-	while (*str)
-	{
+	for (; *str; str++)
 		_putchar(*str);
-		str = str + 1;
-	}
-	_putchar(10);
+	_putchar('\n');
 }
+
+

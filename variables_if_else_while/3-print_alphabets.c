@@ -1,18 +1,22 @@
 #include <stdlib.h>
 #include <stdio.h>
+
+
 /**
-* main - description
+* main - Prints the lowercase alphabet and then the uppercase alphabet.
 *
-* Return: description
+* Return: Always 0.
 */
 int main(void)
 {
 	int i;
 
-	for (i = 97; i <= 122; i++)
+	for (i = 'a'; i <= 'z'; i++)
 		putchar(i);
-	for (i = 65; i <= 90; i++)
+	for (i = 'A'; i <= 'Z'; i++)
 		putchar(i);
 	putchar('\n');
 	return (0);
 }
+
+

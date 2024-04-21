@@ -1,22 +1,23 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
 #include "main.h"
-#endif
+
 
 /**
- * string_toupper - asdfg
- * @c: asdfg
- * Return: asdfg
+ * string_toupper - Turns all lowercase characters in string to uppercase.
+ *
+ * @c: String.
+ *
+ * Return: (c).
  */
 char *string_toupper(char *c)
 {
 	int i;
 
-	for (i = 0; *c; c++)
+	for (i = 0; c[i]; i++)
 	{
-		if (*c >= 97 && *c <= 122)
-			*c = *c - 32;
-		i += 1;
+		if (c[i] >= 'a' && c[i] <= 'z')
+			c[i] -= 'a' - 'A';
 	}
-	return (c - i);
+	return (c);
 }
+
+

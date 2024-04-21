@@ -1,13 +1,12 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
 #include "main.h"
 #include <stdio.h>
-#endif
+
 
 /**
- * print_array - asdfg
- * @a: asdfg
- * @n: asdfg
+ * print_array - Prints an integer array.
+ *
+ * @a: Int array.
+ * @n: Number of elements to print.
  */
 void print_array(int *a, int n)
 {
@@ -20,10 +19,9 @@ void print_array(int *a, int n)
 			printf("%d, ", *a);
 			a = a + 1;
 		}
-		printf("%d\n", *a);
+		printf("%d", *a);
 	}
-	else
-	{
-		printf("\n");
-	}
+	putchar("\n");
 }
+
+

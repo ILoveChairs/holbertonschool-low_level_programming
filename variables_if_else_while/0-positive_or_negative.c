@@ -1,11 +1,12 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+
+
 /**
-* main - description
+* main - Generates a random number and prints if it is negative or not.
 *
-*
-* Return: description
+* Return: Always 0.
 */
 int main(void)
 {
@@ -21,3 +22,5 @@ int main(void)
 		printf("%d is zero\n", n);
 	return (0);
 }
+
+

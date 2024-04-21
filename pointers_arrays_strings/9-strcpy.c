@@ -1,25 +1,24 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
 #include "main.h"
-#endif
+
 
 /**
- * _strcpy - asdfg
- * @dest: asdfg
- * @src: asdfg
- * Return: asdfg
+ * _strcpy - Copies the content of a string to another.
+ * Including the terminating byte.
+ *
+ * @dest: Destiny. String that gets copied to.
+ * @src: Source. String that gets copied from.
+ *
+ * Return: (dest).
  */
 char *_strcpy(char *dest, char *src)
 {
 	int i;
 
-	for (i = 0; *src; src++)
-	{
-		*dest = *src;
-		dest = dest + 1;
-		i = i + 1;
-	}
-	*dest = *src;
-	dest = dest - i;
+	for (i = 0; src[i]; i++)
+		dest[i] = src[i];
+	dest[i] = src[i];
+
 	return (dest);
 }
+
+

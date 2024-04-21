@@ -1,12 +1,12 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
 #include "main.h"
-#endif
+
 
 /**
- * leet - asdfg
- * @n: asdfg
- * Return: asdfg
+ * leet - Encodes a string to Leet code.
+ *
+ * @n: String.
+ *
+ * Return: (n).
  */
 char *leet(char *n)
 {
@@ -15,15 +15,16 @@ char *leet(char *n)
 	char to_replace[] = {65, 69, 79, 84, 76};
 	char leet_l[] = {52, 51, 48, 55, 49};
 
-	for (i = 0; *n; n++)
+	for (i = 0; n[i]; i++)
 	{
 		for (l = 0; l < 5; l++)
 		{
-			if ((*n == to_replace[l]) || (*n == to_replace[l] + 32))
-				*n = leet_l[l];
+			if ((n[i] == to_replace[l]) || (n[i] == to_replace[l] + 32))
+				n[i] = leet_l[l];
 		}
-		i += 1;
 	}
 
-	return (n - i);
+	return (n);
 }
+
+

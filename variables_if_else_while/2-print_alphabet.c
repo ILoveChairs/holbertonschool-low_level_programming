@@ -1,9 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
+
+
 /**
-* main - description
+* main - Prints all the lowercase alphabet
 *
-* Return: description
+* Return: Always 0.
 */
 int main(void)
 {
@@ -14,3 +16,5 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
+
+

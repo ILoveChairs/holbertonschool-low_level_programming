@@ -1,22 +1,21 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
 #include "main.h"
-#endif
+
 
 /**
- * _strlen - asdfg
- * @s: asdfg
- * Return: asdfg
+ * _strlen - Gets and returns the length of a string.
+ *
+ * @s: String.
+ *
+ * Return: Length of (s).
  */
 int _strlen(char *s)
 {
-	int sum;
+	int len;
 
-	sum = 0;
-	while (*s)
-	{
-		sum = sum + 1;
-		s = s + 1;
-	}
-	return (sum);
+	for (len = 0; s[len]; len++)
+		;
+
+	return (len);
 }
+
+

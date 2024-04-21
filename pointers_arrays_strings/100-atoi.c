@@ -1,50 +1,38 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
 #include "main.h"
 #include <math.h>
-#endif
+
 
 /**
- * _atoi - asdfg
- * @s: asdfg
- * Return: asdfg
+ * _atoi - Converts a string containing numbers to an integer.
+ *
+ * @s: String.
+ *
+ * Return: Integer.
  */
 int _atoi(char *s)
 {
-	int num;
-	int num_bool;
-	int nega;
-	int nega_bool;
+	int i, flag, num, digit, sign;
 
-	num = 0;
-	num_bool = 0;
-	nega = 0;
-	nega_bool = 1;
-	for (; *s; s++)
+	for (i = num = digit = sign = 0, flag = 1; s[i]; i++)
 	{
-		if (*s == '-' && nega_bool)
-			if (nega == 1)
-				nega = 0;
-			else
-				nega = 1;
-		else if (*s >= 48 && *s <= 57)
+		if (s[i] == '+' && flag)
+			sign += 1;
+		else if (s[i] == '-' && flag)
+			sign -= 1;
+		else if (s[i] >= '0' && s[i] <= '9')
 		{
-			if (num_bool || num == 0)
+			if (flag)
 			{
-				num_bool = 1;
-				if (num > 0)
-					num = (num * 10) + (*s - 48);
-				else if (num < 0)
-					num = (num * 10) - (*s - 48);
-				else
-					num = *s - 48;
+				if (num != 0)
+					num *= 10;
+				num -= s[i] - '0';
 			}
-			if (nega == 1 && nega_bool)
-				num = num * -1;
-			nega_bool = 0;
 		}
-		else if (num_bool)
-			num_bool = 0;
+		else if (num != 0)
+			flag = 0;
 	}
+
+	if (sign >= 0)
+		return (num * -1);
 	return (num);
 }

@@ -1,28 +1,23 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
 #include "main.h"
-#endif
+
 
 /**
- * reverse_array - asdfg
- * @a: asdfg
- * @n: asdfg
+ * reverse_array - Reverses the order of the elements of an array.
+ *
+ * @a: Integer array.
+ * @n: Number of elements.
  */
 void reverse_array(int *a, int n)
 {
-	int tmp[2048] = {0};
+	int tmp;
 	int i;
 
-	for (i = 0; i < n; a++)
+	for (i = 0, n -= 1; i <= n / 2; i++)
 	{
-		tmp[i] = *a;
-		i += 1;
-	}
-
-	a -= i;
-	for (; i > 0; a++)
-	{
-		*a = tmp[i - 1];
-		i -= 1;
+		tmp = a[i];
+		a[i] = a[n - i];
+		a[n - i] = tmp;
 	}
 }
+
+

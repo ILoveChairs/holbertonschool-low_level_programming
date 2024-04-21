@@ -4,9 +4,10 @@
 #endif
 
 /**
- * swap_int - asdfg
- * @a: asdfg
- * @b: asdfg
+ * swap_int - Swaps the value of two integer pointers.
+ *
+ * @a: Integer 1.
+ * @b: Integer 2.
  */
 void swap_int(int *a, int *b)
 {

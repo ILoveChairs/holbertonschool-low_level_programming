@@ -1,14 +1,14 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
 #include "main.h"
-#endif
+
 
 /**
- * _strncat - asdfg
- * @dest: sad
- * @src: sad
- * @n: sad
- * Return: asdfg
+ * _strncat - Concatenates two strings until (n) bytes.
+ *
+ * @dest: Destiny.
+ * @src: Source.
+ * @n: Limit of bytes to concatenate.
+ *
+ * Return: (dest).
  */
 char *_strncat(char *dest, char *src, int n)
 {
@@ -26,3 +26,5 @@ char *_strncat(char *dest, char *src, int n)
 	}
 	return (dest - i);
 }
+
+

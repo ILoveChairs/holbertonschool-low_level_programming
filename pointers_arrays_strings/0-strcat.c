@@ -1,13 +1,13 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
 #include "main.h"
-#endif
+
 
 /**
- * _strcat - asdfg
- * @dest: asdfg
- * @src: asdfg
- * Return: asdfg
+ * _strcat - Concatenates two strings.
+ *
+ * @dest: String that gets concatenated, goes before (src).
+ * @src: String to concatenate, goes after (dest).
+ *
+ * Return: (dest).
  */
 char *_strcat(char *dest, char *src)
 {
@@ -23,3 +23,5 @@ char *_strcat(char *dest, char *src)
 	}
 	return (dest - i);
 }
+
+

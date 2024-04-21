@@ -1,14 +1,14 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
 #include "main.h"
-#endif
+
 
 /**
- * _memcpy - asdfg
- * @dest: asdfg
- * @src: asdfg
- * @n: asdfg
- * Return: asdfg
+ * _memcpy - Copies the memory of a char array to another until (n) bytes.
+ *
+ * @dest: Destiny to copy to.
+ * @src: Source to copy from.
+ * @n: Limit of bytes to copy.
+ *
+ * Return: (dest).
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
@@ -30,3 +30,5 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 
 	return (dest - i);
 }
+
+

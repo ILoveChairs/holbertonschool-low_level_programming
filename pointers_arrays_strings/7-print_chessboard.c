@@ -1,11 +1,10 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
 #include "main.h"
-#endif
+
 
 /**
- * print_chessboard - asdfg
- * @a: asdfg
+ * print_chessboard - Prints a chessboard array.
+ *
+ * @a: Array.
  */
 void print_chessboard(char (*a)[8])
 {
@@ -21,3 +20,5 @@ void print_chessboard(char (*a)[8])
 		_putchar(10);
 	}
 }
+
+

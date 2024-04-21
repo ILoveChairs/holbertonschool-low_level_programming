@@ -1,25 +1,24 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
 #include "main.h"
-#endif
+
 
 /**
- * _strchr - asdfg
- * @s: asdfg
- * @c: asdfg
- * Return: asdfg
+ * _strchr - Locates a character in a string.
+ *
+ * @s: String.
+ * @c: Char.
+ *
+ * Return: Char * of char if found.
  */
 char *_strchr(char *s, char c)
 {
 	int i;
 
-	for (i = 0; *s; s++)
+	for (i = 0; s[i]; i++)
 	{
-		if (*s == c)
-			return (s);
-		i += 1;
+		if (s[i] == c)
+			return (s + i);
 	}
-	if (c == '\0')
-		return (s);
 	return (0);
 }
+
+

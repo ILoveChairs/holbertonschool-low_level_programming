@@ -1,32 +1,20 @@
 #include <stdio.h>
 
+
 /**
-* main - asdfg
+* main - Prints size of many variable types.
 *
-*
-*
-*
-*
-*
-*
-*
-*
-*
-* Return: 0 if success
+* Return: Always 0.
 */
 int main(void)
 {
-	char var_1;
-	int var_2;
-	long int var_3;
-	long long int var_4;
-	float var_5;
-
-	printf("Size of a char: %lu byte(s)", sizeof(var_1));
-	printf("\nSize of an int: %lu byte(s)", sizeof(var_2));
-	printf("\nSize of a long int: %lu byte(s)", sizeof(var_3));
-	printf("\nSize of a long long int: %lu byte(s)", sizeof(var_4));
-	printf("\nSize of a float: %lu byte(s)", sizeof(var_5));
+	printf("Size of a char: %lu byte(s)", sizeof(char));
+	printf("\nSize of an int: %lu byte(s)", sizeof(int));
+	printf("\nSize of a long int: %lu byte(s)", sizeof(long int));
+	printf("\nSize of a long long int: %lu byte(s)", sizeof(long long int));
+	printf("\nSize of a float: %lu byte(s)", sizeof(float));
 	putchar('\n');
 	return (0);
 }
+
+

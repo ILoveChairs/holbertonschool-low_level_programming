@@ -1,9 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
+
+
 /**
-* main - description
+* main - Prints all three digit combinations.
 *
-* Return: description
+* Return: Always 0.
 */
 int main(void)
 {
@@ -13,18 +15,18 @@ int main(void)
 	int tmp;
 	int foo;
 
-	tmp = 49;
-	foo = 50;
-	for (i = 48; i < 56; i++)
+	tmp = '1';
+	foo = '2';
+	for (i = '0'; i < '8'; i++)
 	{
-		for (j = tmp; j <= 57; j++)
+		for (j = tmp; j <= '9'; j++)
 		{
-			for (l = foo; l <= 57; l++)
+			for (l = foo; l <= '9'; l++)
 			{
 				putchar(i);
 				putchar(j);
 				putchar(l);
-				if (i != 55 || tmp != 56 || foo != 57)
+				if (i != '7' || tmp != '8' || foo != '9')
 				{
 					putchar(',');
 					putchar(' ');
@@ -38,3 +40,5 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
+
+

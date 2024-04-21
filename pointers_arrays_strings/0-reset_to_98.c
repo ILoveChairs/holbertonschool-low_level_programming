@@ -1,15 +1,14 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
 #include "main.h"
-#endif
+
 
 /**
- * reset_to_98 - asdfg
- * @n: asdfg
+ * reset_to_98 - Sets an integer pointer to 98.
  *
- * Return: asdfg
+ * @n: Integer pointer.
  */
 void reset_to_98(int *n)
 {
 	*n = 98;
 }
+
+

@@ -1,20 +1,22 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
 #include "main.h"
-#endif
+
 
 /**
- * puts_half - asdfg
- * @str: asdfg
+ * puts_half - Prints the second half of the string.
+ *
+ * @str: String to print.
  */
 void puts_half(char *str)
 {
 	int len;
 
-	for (len = 0; *str; len++)
-		str = str + 1;
-	str = str - len / 2;
-	for (; *str; str++)
-		_putchar(*str);
-	_putchar(10);
+	/* strlen */
+	for (len = 0; str[len]; len++)
+		;
+
+	for (len /= 2; str[len]; len++)
+		_putchar(str[len]);
+	_putchar('\n');
 }
+
+

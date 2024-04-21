@@ -1,36 +1,27 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
 #include "main.h"
-#endif
+
 
 /**
- * rev_string - asdfg
- * @s: asdfg
+ * rev_string - Reverses a string.
+ *
+ * @s: String.
  */
 void rev_string(char *s)
 {
-	int i = 0;
-	int l = 0;
-	char ss[1024];
+	int i;
+	int len;
+	char tmp;
 
-	while (*s)
+	/* strlen saved in len */
+	for (len = 0; s[len]; len++)
+		;
+
+	for (i = 0, len = len - 1; i <= len / 2; i++)
 	{
-		s = s + 1;
-		i = i + 1;
-	}
-	s = s - 1;
-	while (i != 0)
-	{
-		ss[l] = *s;
-		s = s - 1;
-		i = i - 1;
-		l = l + 1;
-	}
-	s = s + 1;
-	while (*s)
-	{
-		*s = ss[i];
-		s = s + 1;
-		i = i + 1;
+		tmp = s[i];
+		s[i] = s[len - i];
+		s[len - i] = tmp;
 	}
 }
+
+

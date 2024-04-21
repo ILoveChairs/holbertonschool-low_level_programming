@@ -1,16 +1,20 @@
 #include <stdlib.h>
 #include <stdio.h>
+
+
 /**
-* main - description
+* main - Prints the lowercase alphabet backwards.
 *
-* Return: description
+* Return: Always 0.
 */
 int main(void)
 {
 	int i;
 
-	for (i = 122; i >= 97; i--)
+	for (i = 'z'; i >= 'a'; i--)
 		putchar(i);
 	putchar('\n');
 	return (0);
 }
+
+

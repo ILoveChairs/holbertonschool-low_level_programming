@@ -1,13 +1,12 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
 #include "main.h"
 #include <stdio.h>
-#endif
+
 
 /**
- * print_diagsums - asdfg
- * @a: asdfg
- * @size: asdfg
+ * print_diagsums - Prints the sum of the diagonals.
+ *
+ * @a: Array
+ * @size: Size.
  */
 void print_diagsums(int *a, int size)
 {
@@ -32,3 +31,5 @@ void print_diagsums(int *a, int size)
 
 	printf("%d, %d\n", sum1, sum2);
 }
+
+

@@ -1,11 +1,11 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
 #include "main.h"
-#endif
+
 
 /**
- * puts2 - asdfg
- * @str: asdfg
+ * puts2 - Prints every other character of a string,
+ * starting with the first character, followed by a new line.
+ *
+ * @str: Strint to print.
  */
 void puts2(char *str)
 {
@@ -17,5 +17,7 @@ void puts2(char *str)
 			_putchar(*str);
 		str = str + 1;
 	}
-	_putchar(10);
+	_putchar('\n');
 }
+
+

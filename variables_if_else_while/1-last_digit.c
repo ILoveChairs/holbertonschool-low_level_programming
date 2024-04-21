@@ -1,10 +1,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
+
+
 /**
-* main - description
+* main - Generates a random number and then prints if it is within a certain
+* range.
 *
-* Return: description
+* Return: Always 0.
 */
 int main(void)
 {
@@ -24,3 +27,5 @@ int main(void)
 	printf("\n");
 	return (0);
 }
+
+
